@@ -53,7 +53,7 @@ gulp.task('less-compile', () =>
 
 gulp.task('build', () =>
     gulp.src([
-        './public/javascripts/game.jsx',
+        './frontend/game.jsx',
     ])
         .pipe(babel({
             presets: ['react']
