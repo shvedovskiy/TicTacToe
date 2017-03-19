@@ -1,0 +1,23 @@
+{
+  "name": "TicTacToe",
+  "description": "A multiplayer browser game",
+  "version": "1.0.0",
+  "main": "www.js",
+  "authors": [
+    "Oleg Shvedov <www.goo5@me.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/shvedovskiy/tictactoe",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "react": "~0.12.2",
+    "font-awesome": "~4.3.0",
+    "bootstrap": "~3.3.2",
+    "gulp": "~3.8.11"
+  }
+}

@@ -1,0 +1,23 @@
+doctype html
+html(lang='ru_RU')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='Oleg Shvedov')
+        title=title
+        link(rel='icon', href='favicon.ico')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        block content
+        script(src='/javascripts/lib/jquery.js')
+        script(src='/javascripts/lib/bootstrap.js')
+        script(src='/javascripts/lib/react.js')
+        script(src='/javascripts/lib/soundmanager2.js')
+        script(src='/javascripts/game.js')
+        script(src='/javascripts/main.js')
+        script(src='/socket.io/socket.io.js')
+        script var sock = io.connect('http://0.0.0.0:3000');

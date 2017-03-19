@@ -1,0 +1,56 @@
+extends layout
+
+block content
+    div(class='container')
+        div(id='enter-page', class='row page')
+            div(class='col-md-8 col-md-offset-2')
+                h2 Добро пожаловать в игру "Крестики-Нолики!"
+                hr
+                div(class='form-group')
+                    input(id='player-name-input', type='text', class='form-control', placeholder='Введите свой игровой ник')
+                div(class='control-group', style='margin-top: 20px;')
+                    div(class='controls')
+                        button(id='play-btn' class='btn btn-success') Начать игру! &nbsp;
+                            i(class='fa fa-check fa-lg' aria-hidden='true')
+                hr
+                div(class='rules')
+                    h4 Правила игры:
+                    p Игроки по очереди ставят на свободные клетки поля 3х3 знаки (один всегда крестики, другой всегда нолики). Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает. Первый ход делает игрок, ставящий крестики.
+                    p Обычно по завершении партии выигравшая сторона зачёркивает чертой свои три знака (нолика или крестика), составляющих сплошной ряд.
+                    p Для каждой из сторон общеизвестны алгоритмы, которые гарантируют ничью при любой игре противника, а при его ошибке позволяют выиграть. Таким образом, игра находится в состоянии «ничейной смерти».
+
+        div(id='invite-page', class='row page')
+            div(class='col-md-8 col-md-offset-2')
+                h2 Пригласите соперника по ссылке ниже:
+                div(class='alert alert-info' role='alert')
+                    p(id='url')= url
+
+        div(id='waiting-page', class='row page')
+            div(class='col-md-8 col-md-offset-2')
+                h2 Ожидаем соперника
+                hr
+                i(class='fa fa-spinner fa-3x', aria-hidden='true')
+
+        div(id='game-page' class='page')
+            div(class='row')
+                div(class='col-md-8 col-md-offset-2')
+                    h2 Играем...
+                    hr
+                    div(id='game')
+                    hr
+            div(class='row')
+                div(class='col-md-8 col-md-offset-2')
+                    h4 Игровой чат
+                    form(class='input-group message-form')
+                        input(type='text', id='message-input', class='form-control', autocomplete='off', placeholder='Новое сообщение')
+                        span(class='input-group-btn')
+                            button(class='btn btn-default', type='submit') Отправить
+                    ul(id='chat')
+
+        div(id='result-page' class='row page')
+            div(class='col-md-8 col-md-offset-2')
+                h2 Крестики-Нолики
+                hr
+                div(class='well')
+                    h3(id='result-text')
+                    button(id='play-again-btn' class='btn btn-success') Играть заново!
