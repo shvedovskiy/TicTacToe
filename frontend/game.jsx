@@ -173,6 +173,29 @@ const ChatApp = React.createClass({
         };
     },
 
+    componentDidMount: function() {
+        sock.on('init', this._init);
+        sock.on('chat message', this._messageReceive);
+    },
+
+    _init: function (data) {
+        let {users, name} = data;
+        this.setState({ users, user: name });
+    },
+
+    _messageReceive: function (msg) {
+        let {messages} = this.state;
+        messages.push(msg);
+        this.setState({messages});
+    },
+
+    handleMessageSubmit: function (msg) {
+        let {messages} = this.state;
+        messages.push(msg);
+        this.setState({messages});
+        sock.emit('chat message', msg);
+    },
+
     render: function() {
         return(
             <div className="row">

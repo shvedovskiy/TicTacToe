@@ -27,17 +27,17 @@ $(function() {
         window.location = url[0] + '//' + url[2];
     });
 
-    // Отправка новоего сообщения в чат:
-    $('form').submit(() => {
-        sock.emit('chat message', $('#message-input').val(), playerName);
-        $('#message-input').val('');
-        return false;
-    });
-
-    // Новое сообщение в чате комнаты:
-    sock.on('chat message', (m, name)  =>
-        $('#chat').prepend($('<li>').text(name + ' : ' + m))
-    );
+    // // Отправка новоего сообщения в чат:
+    // $('form').submit(() => {
+    //     sock.emit('chat message', $('#message-input').val(), playerName);
+    //     $('#message-input').val('');
+    //     return false;
+    // });
+    //
+    // // Новое сообщение в чате комнаты:
+    // sock.on('chat message', (m, name)  =>
+    //     $('#chat').prepend($('<li>').text(name + ' : ' + m))
+    // );
 
     // Определить, обычный ли это игрок, или приглашенный:
     sock.on('check player', (playerName) => {
