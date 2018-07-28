@@ -1,5 +1,7 @@
 # Multiplayer Tic-Tac-Toe game
 
+*Out of date version, see the new at https://github.com/shvedovskiy/redux-universal-tic-tac-toe*
+
 Main technologies: NodeJS, React, Socket.io, Express, jQuery, Bootstrap.
 
 ## Running it!
