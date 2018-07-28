@@ -1,6 +1,6 @@
 # Multiplayer Tic-Tac-Toe game
 
-Written on NodeJS, React, Socket.io, Express, jQuery, Bootstrap.
+Main technologies: NodeJS, React, Socket.io, Express, jQuery, Bootstrap.
 
 ## Running it!
 
